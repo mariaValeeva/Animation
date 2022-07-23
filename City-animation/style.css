@@ -1,0 +1,76 @@
+body {
+    margin: 0 auto;
+    max-width: 580px;
+    border: 1px solid palevioletred;
+}
+
+
+.city {
+    border: 1px solid black;
+    width: 580px;
+    height: 400px;
+    background-image: url(img/newyork.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 170px;
+    background-color: rgb(138, 195, 219);
+    position: relative;
+    overflow: hidden;
+}
+
+.city img {
+    position: absolute;
+}
+
+.cloud1 {
+    left: 100px;
+    animation: cloud 20s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.cloud2 {
+    left: 400px;
+    top: 50px;
+    animation: cloud 30s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.cloud3 {
+    left: 200px;
+    top: 20px;
+    animation: cloud 25s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+
+
+.plane {
+    left: -230px;
+    top: 80px;
+    animation: fly 10s linear;
+}
+
+.boat {
+    bottom: 0;
+    right: -230px;
+    animation: swim 16s linear;
+    animation-delay: 2s;
+}
+
+@keyframes fly {
+    100% {
+        transform: translate(800px, -100px);
+    }
+}
+
+@keyframes swim {
+    100% {
+        transform: translateX(-830px);
+    }
+}
+
+@keyframes cloud {
+    100% {
+        transform: translate(200px, 20px);
+    }
+}
