@@ -1,0 +1,109 @@
+body {
+    overflow: hidden;
+    width: 100vw;
+    background-image: url(img/background.jpg);
+}
+
+body img {
+    position: absolute;
+}
+
+
+
+.moon {
+    right: -70px;
+    bottom: -70px;
+    z-index: 10;
+}
+
+.astronaut {
+    width: 180px;
+    height: 240px;
+    right: -200px;
+    top: 100px;
+    animation: austronaut 30s linear;
+    z-index: 10;
+}
+
+.stars {
+    width: 600px;
+    height: 500px;
+    animation: stars 30s linear;
+}
+
+.stars-2 {
+    left: 500px;
+    top: 200px;
+    animation: stars 35s linear;
+}
+
+.stars-3 {
+    right: 0;
+    top: 0;
+    animation: stars 32s linear;
+}
+
+.spaceship {
+    width: 150px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: scale(0);
+    animation: ship-move 18s 8s forwards;
+    z-index: 10;
+}
+
+.comet {
+    width: 500px;
+    height: 200px;
+    left: -830px;
+    bottom: -300px;
+    animation: comet 4s 15s linear;
+}
+
+.comet2 {
+    width: 200px;
+    height: 100px;
+    left: -300px;
+    bottom: 200px;
+    animation: comet2 3s 1s linear;
+}
+
+
+@keyframes austronaut {
+    to {
+        transform: translateX(-2000px) translateY(-400px) rotate(-180deg);
+    }
+}
+
+@keyframes stars {
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes ship-move {
+    25% {
+        transform: scale(.8) translate(-300px, -45px);
+    }
+
+    70%,
+    100% {
+        transform: scale(5) translate(250px, 300px);
+    }
+}
+
+@keyframes comet {
+    100% {
+        transform:  translate(2000px, -420px);
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes comet2 {
+    100% {
+        transform: translate(1500px, -500px);
+        filter: hue-rotate(360deg);
+    }
+}
+
